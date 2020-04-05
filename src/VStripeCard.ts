@@ -392,6 +392,7 @@ export default base.extend<options>().extend({
         this.okToSubmit = false
         this.lazyValue = !e.empty
       }
+      this.$emit('change', e.error.message ? e.error.message : '')
     },
     /**
      * TODO: Should this function emit? Does it emit the right value?
